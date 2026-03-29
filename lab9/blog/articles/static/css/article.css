@@ -1,0 +1,79 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* шапка */
+.header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    float: left;
+}
+
+a:-webkit-any-link {
+    float: right !important;
+    color: #fff !important;
+    text-decoration: underline !important;
+    margin-top: 10px !important;
+    margin-right: 2%;
+}
+
+.username {
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* контент */
+.content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+
+/* метаданные */
+.article-meta {
+    font-size: 16px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.article-author {
+    float: left;
+    font-weight: bold;
+}
+
+.article-date {
+    float: right;
+    font-style: italic;
+}
+
+/* текст статьи */
+.article-text {
+    font-size: 14px;
+    line-height: 1.5;
+    clear: both;
+}
+
+.article-text p {
+    margin: 0 0 15px 0;
+}

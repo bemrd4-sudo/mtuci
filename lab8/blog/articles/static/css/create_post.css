@@ -1,0 +1,125 @@
+/* Стили для страницы создания статьи */
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    float: left;
+}
+
+.header .all-posts-link {
+    float: right;
+    color: #ffffff;
+    font-family: Tahoma, Arial, sans-serif;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.clear {
+    clear: both;
+}
+
+.content {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Заголовок страницы */
+h1 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 30px 0;
+}
+
+h2 {
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+/* Контейнер формы */
+.form-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Группа полей формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+/* Поля ввода */
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ffffff;
+    background: #ffffff;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    background: #16a085;
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #14937a;
+}
+
+/* Сообщение об ошибке */
+.error-message {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid #ff6b6b;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+}

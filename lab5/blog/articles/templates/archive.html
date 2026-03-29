@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>все статьи</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/archive.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/dpb-logo.jpg" alt="лого">
+        <div class="header-links">
+            <a href="/article/new/" class="new-post-link">+ написать</a>
+        </div>
+    </div>
+    
+    <div class="archive">
+        {% for post in posts %}
+        <div class="post">
+            <h2>
+                <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+            </h2>
+            <div class="post-info">
+                <span class="post-author">{{ post.author.username }}</span>
+                <span class="post-date">{{ post.created_date }}</span>
+            </div>
+            <p class="post-excerpt">{{ post.get_excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

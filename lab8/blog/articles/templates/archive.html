@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>все статьи</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/archive.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/dpb-logo.jpg" alt="лого">
+        <div class="header-right">
+            {% if request.user.is_anonymous %}
+                <a href="/login/" class="header-link">вход</a>
+                <a href="/register/" class="header-link">регистрация</a>
+            {% else %}
+                <span class="username">{{ request.user.username }}</span>
+                <a href="/article/new/" class="header-link">+ написать</a>
+                <a href="/logout/" class="header-link">выход</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="content">
+        {% for post in posts %}
+        <div class="post">
+            <div class="post-header">
+                <h2 class="post-title">
+                    <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+                </h2>
+                <span class="fold-link">свернуть</span>
+                <div class="clear"></div>
+            </div>
+            
+            <div class="post-content">
+                <div class="post-meta">
+                    <span class="post-author">{{ post.author.username }}</span>
+                    <span class="post-date">{{ post.created_date|date:"d F Y" }}</span>
+                </div>
+                <div class="post-text">
+                    {{ post.get_excerpt|linebreaksbr }}
+                </div>
+            </div>
+            <div class="post-shadow"></div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="{{ STATIC_URL }}js/helloworld.js"></script>
+    <script src="{{ STATIC_URL }}js/fold-post.js"></script>
+    <script src="{{ STATIC_URL }}js/highlight-post.js"></script>
+    <script src="{{ STATIC_URL }}js/logo-effect.js"></script>
+</body>
+</html>

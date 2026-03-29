@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/article.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/dpb-logo.jpg" alt="лого">
+        {% if request.user.is_anonymous %}
+                <a href="/" class="back-link">все статьи</a>
+            {% else %}
+                <a href="/article/new/" class="back-link">+ написать</a>
+                <a href="/" class="back-link">все статьи</a>
+            {% endif %}
+        <div class="clear"></div>
+    </div>
+    
+    <div class="content">
+        <h1>{{ post.title }}</h1>
+        
+        <div class="article-meta">
+            <span class="article-author">{{ post.author.username }}</span>
+            <span class="article-date">{{ post.created_date|date:"d F Y" }}</span>
+        </div>
+        
+        <div class="article-text">
+            {{ post.text|linebreaksbr }}
+        </div>
+    </div>
+</body>
+</html>

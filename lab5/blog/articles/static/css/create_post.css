@@ -1,0 +1,115 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+/* шапка */
+.header {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.header img {
+    width: 150px;
+    height: auto;
+    float: left;
+}
+
+.back-link {
+    float: right;
+    color: #fff;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.back-link:hover {
+    text-decoration: none;
+}
+
+.clear {
+    clear: both;
+}
+
+/* контент */
+.content {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+/* форма */
+.post-form {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    background: rgba(255,255,255,0.9);
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #fff;
+    background: #fff;
+    outline: none;
+}
+
+/* кнопка */
+.submit-btn {
+    background: #16a085;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: #14937a;
+}
+
+/* ошибка */
+.error-message {
+    background: rgba(255,0,0,0.2);
+    border: 1px solid #ff6b6b;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}

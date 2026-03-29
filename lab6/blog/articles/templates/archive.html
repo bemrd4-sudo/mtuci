@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>все статьи</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/archive.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/dpb-logo.jpg" alt="лого">
+        <div class="header-right">
+            {% if request.user.is_anonymous %}
+                <a href="/login/" class="header-link">вход</a>
+                <a href="/register/" class="header-link">регистрация</a>
+            {% else %}
+                <span class="username">{{ request.user.username }}</span>
+                <a href="/article/new/" class="header-link">+ написать</a>
+                <a href="/logout/" class="header-link">выход</a>
+            {% endif %}
+        </div>
+    </div>
+    
+    <div class="archive">
+        {% for post in posts %}
+        <div class="post">
+            <h2>
+                <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+            </h2>
+            <div class="post-info">
+                <span class="post-author">{{ post.author.username }}</span>
+                <span class="post-date">{{ post.created_date }}</span>
+            </div>
+            <p class="post-excerpt">{{ post.get_excerpt }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

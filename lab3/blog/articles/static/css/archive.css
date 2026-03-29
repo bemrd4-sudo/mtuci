@@ -1,0 +1,27 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #fff;  /* белый */
+}
+
+/* контейнер для статей */
+.archive {
+    width: 960px;
+    margin: 0 auto;  /* по центру */
+}
+
+/* автор слева */
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+/* дата справа */
+.article-created-date {
+    text-align: right;
+}
+
+/* ссылки в заголовках */
+.post-title a {
+    color: #fff;
+}

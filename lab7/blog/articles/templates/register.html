@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>регистрация</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/register.css">
+</head>
+<body>
+    <div class="header">
+        <img src="{{ STATIC_URL }}img/dpb-logo.jpg" alt="лого">
+        <a href="/" class="back-link">все статьи</a>
+        <div class="clear"></div>
+    </div>
+    
+    <div class="content">
+        <h1>регистрация</h1>
+        
+        <form method="POST" class="auth-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="username">логин:</label>
+                <input type="text" name="username" id="username" 
+                       value="{{ username }}" placeholder="придумай логин">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">email:</label>
+                <input type="email" name="email" id="email" 
+                       value="{{ email }}" placeholder="твой email">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">пароль:</label>
+                <input type="password" name="password" id="password" 
+                       placeholder="придумай пароль">
+            </div>
+            
+            <div class="form-group">
+                <label for="password_confirm">еще раз:</label>
+                <input type="password" name="password_confirm" id="password_confirm" 
+                       placeholder="повтори пароль">
+            </div>
+            
+            <button type="submit" class="submit-btn">зарегистрироваться</button>
+            
+            {% if error %}
+            <div class="error">
+                {{ error }}
+            </div>
+            {% endif %}
+        </form>
+        
+        <p class="auth-link">
+            уже есть аккаунт? <a href="/login/">войди</a>
+        </p>
+    </div>
+</body>
+</html>
